@@ -3,7 +3,7 @@ import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import Bet from 'App/Models/Bet'
 import Cart from 'App/Models/Cart'
 import Game from 'App/Models/Game'
-import User from 'App/Models/user'
+import User from 'App/Models/User'
 
 export interface choosen {
   numbers: number[]
