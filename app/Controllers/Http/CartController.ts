@@ -9,6 +9,7 @@ export default class CartsController {
     const cartJSON = cart ? cart.serialize() : {}
 
     const games = await Game.query().select(
+      'id',
       'type',
       'description',
       'range',
