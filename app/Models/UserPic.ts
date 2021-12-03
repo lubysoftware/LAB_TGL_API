@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon'
 import { BaseModel, BelongsTo, belongsTo, column, computed } from '@ioc:Adonis/Lucid/Orm'
-import User from 'App/Models/user'
+import User from 'App/Models/User'
 
 export default class UserPic extends BaseModel {
   @belongsTo(() => User, {

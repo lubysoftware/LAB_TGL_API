@@ -2,7 +2,7 @@ import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import CreateUser from 'App/Validators/CreateUserValidator'
 import UpdateUser from 'App/Validators/UpdateUserValidator'
 import validate from 'App/Services/validationUser'
-import User from 'App/Models/user'
+import User from 'App/Models/User'
 
 export default class UsersController {
   public async create({ request, auth, response }: HttpContextContract) {
