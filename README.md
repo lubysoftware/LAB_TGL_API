@@ -1,6 +1,6 @@
 # TGL API
 
-Passos para inicialização do projeto:
+Passos para inicialização do projeto: **Execute em seu terminal**
 
 1. git clone https://github.com/lubysoftware/LAB_TGL_API
 2. yarn
