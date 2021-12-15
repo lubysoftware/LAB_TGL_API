@@ -2,7 +2,7 @@
 
 Passos para inicialização do projeto:
 
-1. git clone https://github.com/lubysoftware/LabLuby-TGL-API.git
+1. git clone https://github.com/lubysoftware/LAB_TGL_API
 2. yarn
 3. configuração do .env de acordo com o arquivo .env.example
 4. Executar msql e criar um banco de dados chamado **default (Exemplo de ferrameta => [https://laragon.org/download/]())**
