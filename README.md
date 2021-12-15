@@ -1,9 +1,9 @@
 # TGL API
 
-Passos para inicialização do projeto: **Execute em seu terminal**
+Passos para inicialização do projeto: 
 
-1. git clone https://github.com/lubysoftware/LAB_TGL_API
-2. yarn
+1. git clone https://github.com/lubysoftware/LAB_TGL_API (**Execute em seu terminal**)
+2. yarn (**Execute em seu terminal, na raiz do seu projeto**)
 3. configuração do .env de acordo com o arquivo .env.example
 4. Executar msql e criar um banco de dados chamado **default (Exemplo de ferrameta => https://laragon.org/download/)**
 5. node ace migration:run
