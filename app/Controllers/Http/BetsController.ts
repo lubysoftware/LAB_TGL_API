@@ -7,7 +7,7 @@ import User from 'App/Models/User'
 
 export interface choosen {
   numbers: number[]
-  id: number
+  game_id: number
 }
 
 export interface IBetsToSave {
@@ -41,7 +41,7 @@ export default class BetsController {
       const { games }: { games: choosen[] } = request.only(['games'])
 
       const prices = games.map(async (game) => {
-        const GameBase = await Game.findByOrFail('id', game.id)
+        const GameBase = await Game.findByOrFail('id', game.game_id)
 
         const nums = game.numbers
 
