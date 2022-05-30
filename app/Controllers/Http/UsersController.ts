@@ -26,9 +26,10 @@ export default class UsersController {
   public async update({ request, auth, response }: HttpContextContract) {
     const { id } = await auth.use('api').authenticate()
 
+    await request.validate(UpdateUser)
+
     const user = await User.findByOrFail('id', id)
 
-    await request.validate(UpdateUser)
     const data = request.only(['email', 'password', 'name'])
     const confirmation = request.only(['ConfirmPassword', 'oldPassword'])
 
@@ -51,12 +52,12 @@ export default class UsersController {
     const user = await User.findByOrFail('id', id)
 
     await user.load('bets', (queryUser) => {
-      queryUser
+      queryUser.preload('type', (queryGame) => {
+        queryGame.select('id', 'type', 'color')
+      })
     })
 
-    await user.load('picture', (queryUser) => {
-      queryUser
-    })
+    await user.load('picture')
 
     return user
   }
