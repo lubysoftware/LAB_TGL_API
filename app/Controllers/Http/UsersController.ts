@@ -26,9 +26,10 @@ export default class UsersController {
   public async update({ request, auth, response }: HttpContextContract) {
     const { id } = await auth.use('api').authenticate()
 
+    await request.validate(UpdateUser)
+
     const user = await User.findByOrFail('id', id)
 
-    await request.validate(UpdateUser)
     const data = request.only(['email', 'password', 'name'])
     const confirmation = request.only(['ConfirmPassword', 'oldPassword'])
 
