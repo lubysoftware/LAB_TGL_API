@@ -51,12 +51,12 @@ export default class UsersController {
     const user = await User.findByOrFail('id', id)
 
     await user.load('bets', (queryUser) => {
-      queryUser
+      queryUser.preload('type', (queryGame) => {
+        queryGame.select('id', 'type', 'color')
+      })
     })
 
-    await user.load('picture', (queryUser) => {
-      queryUser
-    })
+    await user.load('picture')
 
     return user
   }
